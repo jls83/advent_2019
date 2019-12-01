@@ -34,10 +34,11 @@ fn get_fuel_required_recur(module_mass: &i32) -> i32 {
 }
 
 fn main() {
-    let result_vec = read("project_input.txt").unwrap();
-
-    let foo: Vec<i32> = result_vec.iter().map(get_fuel_required_recur).collect();
-    let total: i32 = foo.iter().sum();
+    let total: i32 = read("project_input.txt")
+        .unwrap()
+        .iter()
+        .map(get_fuel_required_recur)
+        .sum();
 
     println!("{:?}", total);
 }
