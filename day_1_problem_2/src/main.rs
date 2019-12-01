@@ -17,19 +17,18 @@ fn read(path: &str) -> Result<Vec<i32>, Error> {
     Ok(v)
 }
 
-fn ugh(fuel: i32) -> i32 {
+fn get_extra_fuel(fuel: i32) -> i32 {
     let mut res = 0;
     if fuel > 0 {
         let next_val = (fuel / 3) - 2;
-        res = fuel + ugh(next_val);
+        res = fuel + get_extra_fuel(next_val);
     }
     res
 }
 
-
 fn get_fuel_required_recur(module_mass: &i32) -> i32 {
     let initial_fuel = (module_mass / 3) - 2;
-    let extra_fuel = ugh(initial_fuel);
+    let extra_fuel = get_extra_fuel(initial_fuel);
     extra_fuel
 }
 
