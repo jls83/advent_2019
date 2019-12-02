@@ -26,8 +26,7 @@ fn get_extra_fuel(fuel: i32) -> i32 {
 
 fn get_fuel_required_recur(module_mass: &i32) -> i32 {
     let initial_fuel = (module_mass / 3) - 2;
-    let extra_fuel = get_extra_fuel(initial_fuel);
-    extra_fuel
+    get_extra_fuel(initial_fuel)
 }
 
 fn main() {
