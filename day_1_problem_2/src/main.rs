@@ -15,12 +15,13 @@ fn read(path: &str) -> Result<Vec<i32>, Error> {
 }
 
 fn get_extra_fuel(fuel: i32) -> i32 {
-    let mut res = 0;
     if fuel > 0 {
         let next_val = (fuel / 3) - 2;
-        res = fuel + get_extra_fuel(next_val);
+        fuel + get_extra_fuel(next_val)
     }
-    res
+    else {
+        0
+    }
 }
 
 fn get_fuel_required_recur(module_mass: &i32) -> i32 {
