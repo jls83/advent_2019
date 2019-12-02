@@ -1,19 +1,16 @@
 use std::fs::File;
-use std::io::{BufRead, BufReader, Error, ErrorKind};
+use std::io::{BufRead, BufReader, Error};
 
 fn read(path: &str) -> Result<Vec<i32>, Error> {
-    let file = File::open(path)?;
-    let br = BufReader::new(file);
+    let v = BufReader::new(File::open(path)?)
+        .lines()
+        .map(|line| line.unwrap()
+             .trim()
+             .parse::<i32>()
+             .unwrap()
+        )
+        .collect();
 
-    let mut v = Vec::new();
-    for line in br.lines() {
-        let line = line?;
-        let n = line
-            .trim()
-            .parse::<i32>()
-            .map_err(|e| Error::new(ErrorKind::InvalidData, e))?;
-        v.push(n);
-    }
     Ok(v)
 }
 
