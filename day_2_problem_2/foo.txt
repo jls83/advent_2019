@@ -1,0 +1,35 @@
+Instruction { location: 0, op_code: 1, operator_left: 12, operator_right: 2, dest_addr: 3 }
+Instruction { location: 4, op_code: 1, operator_left: 1, operator_right: 2, dest_addr: 3 }
+Instruction { location: 8, op_code: 1, operator_left: 3, operator_right: 4, dest_addr: 3 }
+Instruction { location: 12, op_code: 1, operator_left: 5, operator_right: 0, dest_addr: 3 }
+
+Instruction { location: 16, op_code: 2, operator_left: 13, operator_right: 1, dest_addr: 19 }
+Instruction { location: 20, op_code: 1, operator_left: 19, operator_right: 10, dest_addr: 23 }
+Instruction { location: 24, op_code: 2, operator_left: 10, operator_right: 23, dest_addr: 27 }
+Instruction { location: 28, op_code: 1, operator_left: 27, operator_right: 6, dest_addr: 31 }
+Instruction { location: 32, op_code: 1, operator_left: 13, operator_right: 31, dest_addr: 35 }
+Instruction { location: 36, op_code: 1, operator_left: 13, operator_right: 35, dest_addr: 39 }
+Instruction { location: 40, op_code: 1, operator_left: 39, operator_right: 10, dest_addr: 43 }
+Instruction { location: 44, op_code: 2, operator_left: 43, operator_right: 13, dest_addr: 47 }
+Instruction { location: 48, op_code: 1, operator_left: 47, operator_right: 9, dest_addr: 51 }
+Instruction { location: 52, op_code: 2, operator_left: 51, operator_right: 13, dest_addr: 55 }
+Instruction { location: 56, op_code: 1, operator_left: 5, operator_right: 55, dest_addr: 59 }
+Instruction { location: 60, op_code: 2, operator_left: 59, operator_right: 9, dest_addr: 63 }
+Instruction { location: 64, op_code: 1, operator_left: 13, operator_right: 63, dest_addr: 67 }
+Instruction { location: 68, op_code: 2, operator_left: 13, operator_right: 67, dest_addr: 71 }
+Instruction { location: 72, op_code: 1, operator_left: 71, operator_right: 5, dest_addr: 75 }
+Instruction { location: 76, op_code: 2, operator_left: 75, operator_right: 13, dest_addr: 79 }
+Instruction { location: 80, op_code: 1, operator_left: 79, operator_right: 6, dest_addr: 83 }
+Instruction { location: 84, op_code: 1, operator_left: 83, operator_right: 5, dest_addr: 87 }
+Instruction { location: 88, op_code: 2, operator_left: 87, operator_right: 6, dest_addr: 91 }
+Instruction { location: 92, op_code: 1, operator_left: 5, operator_right: 91, dest_addr: 95 }
+Instruction { location: 96, op_code: 1, operator_left: 95, operator_right: 13, dest_addr: 99 }
+Instruction { location: 100, op_code: 2, operator_left: 99, operator_right: 6, dest_addr: 103 }
+Instruction { location: 104, op_code: 1, operator_left: 5, operator_right: 103, dest_addr: 107 }
+Instruction { location: 108, op_code: 1, operator_left: 107, operator_right: 9, dest_addr: 111 }
+Instruction { location: 112, op_code: 2, operator_left: 6, operator_right: 111, dest_addr: 115 }
+Instruction { location: 116, op_code: 1, operator_left: 5, operator_right: 115, dest_addr: 119 }
+
+Instruction { location: 120, op_code: 1, operator_left: 119, operator_right: 2, dest_addr: 123 }
+Instruction { location: 124, op_code: 1, operator_left: 6, operator_right: 123, dest_addr: 0 }
+Instruction { location: 128, op_code: 99, operator_left: 2, operator_right: 14, dest_addr: 0 }
