@@ -21,6 +21,15 @@ struct Instruction {
     dest_addr: usize,
 }
 
+fn create_instruction(instruction_slice: &[i32]) -> Instruction {
+    Instruction {
+        op_code:        instruction_slice[0],
+        operator_left:  instruction_slice[1] as usize,
+        operator_right: instruction_slice[2] as usize,
+        dest_addr:      instruction_slice[3] as usize,
+    }
+}
+
 fn get_result(instruction: &Instruction, contents: &Vec<i32>) -> i32 {
     let value_left = contents[instruction.operator_left];
     let value_right = contents[instruction.operator_right];
@@ -43,12 +52,7 @@ fn main() {
     let mut offset = 0;
 
     loop {
-        let instruction = Instruction {
-            op_code:        contents[offset],
-            operator_left:  contents[offset + 1] as usize,
-            operator_right: contents[offset + 2] as usize,
-            dest_addr:      contents[offset + 3] as usize,
-        };
+        let instruction = create_instruction(&contents[offset..offset+4]);
 
         if instruction.op_code == 99 { break; }
 
