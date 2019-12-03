@@ -1,6 +1,8 @@
 use std::fs;
 use std::io::Error;
 
+const INSTRUCTION_SIZE: usize = 4;
+
 fn parse_file(filename: &str) -> Result<Vec<i32>, Error> {
     let contents = fs::read_to_string(filename)
         .unwrap()
@@ -45,6 +47,7 @@ fn get_result(instruction: &Instruction, contents: &Vec<i32>) -> i32 {
 fn main() {
     let mut contents = parse_file("project_input.txt")
         .unwrap();
+
     // Do some pre-set up
     contents[1] = 12;
     contents[2] = 2;
@@ -59,7 +62,7 @@ fn main() {
         let new_value = get_result(&instruction, &contents);
 
         contents[instruction.dest_addr] = new_value;
-        offset = offset + 4;
+        offset = offset + INSTRUCTION_SIZE;
     }
     println!("{:?}", contents[0]);
 }
